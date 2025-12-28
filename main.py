@@ -34,5 +34,4 @@ def index():
         prediction = "Positif 😊" if result == 1 else "Negatif 😡"
 
     return render_template("index.html", prediction=prediction)
-if __name__ == "__main__":
-    app.run()
+
