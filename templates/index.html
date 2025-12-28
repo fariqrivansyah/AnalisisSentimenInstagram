@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis Instagram</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Sentiment Analysis Komentar Instagram</h1>
+    <p>Model: SVM + TF-IDF</p>
+
+    <form method="POST">
+        <textarea name="comment" placeholder="Masukkan komentar..." required></textarea>
+        <button type="submit">Prediksi Sentimen</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h2>Hasil: {{ prediction }}</h2>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
